@@ -1,0 +1,62 @@
+/***********************
+Projet en groupe
+***********************/
+
+//Site blog/forum
+
+Onglet => Home / Page / Inscription & log-in / Profil (apparait une fois logger).
+
+//Navigation
+
+Utilisateur non inscrit : Accès au site, contenu mais pas de possibilités de commenter ou d'ajouter du contenu.
+
+Utilisateur inscrit : Accès au site, contenu, profil, création de topic, post de message.
+
+
+Home -> Miniatures des pages (les dernieres. Click sur readmore : accès au contenu, possibilité de poster des messages. (BONUS: afficher les 8 derniers topics créer)
+
+Pages -> Affichage de la liste des topics.(BONUS : faire une fonction recherche pour afficher le /les topics voulu)
+
+Inscription / Log-in ->Formulaire + ajout d'un users.
+
+Profil : N'apparait qu'une fois logger.
+
+
+
+/***
+A faire
+***/
+
+//GITHUB
+-un arbre
+
+//HTML
+-une page contenu
+-page de liste des topics
+-formulaire inscription / login
+-page profil
+
+//PHP-mySQL
+-BDD(on peut réutiliser celle du forum + amis)
+-login / inscription
+-ajout de topic / message
+-gérer le formulaire de contact (BONUS)
+
+//AJAX-jQUERY (BONUS)
+-fonction recherche dans la liste des topics
+-auto-complétion
+-animation du site
+
+
+
+/*++*/
+->Recherche de topics : ajouter catégorie et mot clé pour la table TOPICS
+->Possibilité de modifier le topics pour le créateur du topic ( et l'admin)
+
+/*page profil*/
+
+Nom / pseudo / mail / tel / date de naissance / date d'inscription / date de derniere connexion / photo / mot de passe / contact amis
+
+
+/**/
+
