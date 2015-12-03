@@ -31,10 +31,13 @@ A faire
 -un arbre
 
 //HTML
--une page contenu
--page de liste des topics
--formulaire inscription / login
--page profil
+-une page contenu OK
+-page de liste des topics OK
+-formulaire inscription / login OK
+-page profil OK
+
+->!!reste à faire : inté du bouton déconnexion et création de la page de création de topics.!!
+
 
 //PHP-mySQL
 -BDD(on peut réutiliser celle du forum + amis)
