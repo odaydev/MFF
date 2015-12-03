@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>MotherFucking Forum</title>
+	<!--Tag for responsive-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--FontAwesome-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<!--Fonts-->
+	<link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+	<!--Styles + Reset-->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--Favicon-->
+	<link rel="icon" type="image/png" href="img/fav-icon.png" />
+	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="img/fav-icon.png" /><![endif]-->
+</head>
+
+<body>
+	<div class="wrap">
+	
+		<header id="top-page" class="container clearfix">
+				<div id="top-header" class="center">
+					<h1 class="clearfix">
+						<a id="logo" href="index.html">
+							<img src="img/Logo.png" alt="Shoot | Logo"/>
+							<span class="shoot">MFF</span>
+						</a>
+					</h1>
+					<i class="fa fa-bars left-menu"></i>
+					<div id="right-menu">
+						<form id="login" class="clearfix" action="" method="POST">
+							<input type="text" placeholder="email" name="auth[email]" value=""/>
+							<input type="password" placeholder="password" name="auth[password]" />
+							<input type="submit" name="action[connexion]" value="connexion" />
+						</form>
+						<a href="">Mot de passe oublié</a>
+					</div>
+					<div id="search">
+						<i class="fa fa-search" id="search-icon"></i>						
+					</div>
+				</div>
+				<nav id="top-nav" class="main-menu">
+					<ul>
+						<li><a class="center" href="index.html" title="home">Home<i class="fa fa-arrow-right"></i></a></li>
+						<li><a class="center" href="pages.html" title="pages">Pages<i class="fa fa-arrow-right"></i></a></li>
+						<!--Visible seulement une fois logger-->
+						<li><a class="center" href="profil.html" title="profil">Profil<i class="fa fa-arrow-right"></i></a></li>
+						<!--Disparait si la personne est logger-->
+						<li><a class="center" href="inscription.html" title="inscription">Inscription<i class="fa fa-arrow-right"></i></a></li>
+					</ul>
+				</nav>
+		</header>
+		<form id="search-field">
+			<input type="search" name="search" id="search-input" value="Search"/>			
+		</form>
+		
+		<section class="page-content inscription">
+			<form id="inscription-form" class="topics-centered" action="" method="POST">
+			<aside id="inscription-aside">
+				<img src="img/Logo.png" alt="Shoot | Logo"/>
+				<h1>Welcome on MFF</h1>
+			</aside>
+			<!--
+			<?php //if ( $error ) { ?>
+			<h2 id="error-label" style="color: red;"><?=$error?></h2>
+			<?php } ?>-->
+				<label for"photo">Photo</label>
+				<input type="hidden" name="MAX_FILE_SIZE" value="12345" />
+				<input type="file" placeholder="photo" name="user[photo]" value="" />
+				
+				<label for="name">Name</label>
+				<input type="text" placeholder="name" name="user[name]" value="" />
+
+				<label for="pseudo">Pseudo</label>
+				<input type="text" placeholder="pseudo" name="user[pseudo]" value="" />
+
+				<label for="email">Email</label>
+				<input type="text" placeholder="email" name="user[email]" value="" />
+
+				<label for="password">Password</label>
+				<input type="password" placeholder="password" name="user[password]" />
+
+				<label for="repeatpassword">Repeat password</label>
+				<input type="password" placeholder="repeatpassword" name="user[oldpassword]" />
+
+				<label for="birthday">Birthday</label>
+				<input type="date" placeholder="birthday" name="user[birthday]" value=""/>
+
+
+				<input type="submit" name="action[inscription]" value="inscription" />
+			</form>
+		</section>
+
+		<footer>
+			<div class="container">
+				<div id="copyright">
+					<p>&copy; 2014MotherFucking Forum. Built by MFF Team.</p>
+					<p>Premium  Themes by MFF Team.</p>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="pages.html">Pages</a></li>
+						<li><a href="profil.html">Profil</a></li>
+						<li><a href="inscription.html">Inscription</a></li>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+
+	</div>
+<!--Jquery-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+     <script src="js/main.js"></script>
+
+</body>
+</html>

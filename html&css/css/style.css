@@ -1,0 +1,738 @@
+/*Common*/
+body{
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
+	background-color: #d2d2d2;
+}
+.wrap{
+	width: 100%;
+	margin: auto;
+}
+.clearfix::after{
+	content: "";
+	clear: both;
+}
+.more-btn:hover{
+	color: #000; 
+}
+
+/*Same CSS for multiple element*/
+.container, #logo, .main-menu, .main-menu li,
+ #main-part, figure, figcaption, #second-part{
+	width: 100%;
+}
+.center, .centered, #second-part article{
+	width: 90%;
+}
+a, i, textarea, input, p{
+	text-decoration: none;
+	font-size: 0.875em;
+}
+a:hover{
+	font-weight: bold;
+}
+h1{
+	font-size: 2em;
+}
+h2, h3{
+	font-size: 1.25em;
+}
+h4{
+	font-size: 1em;
+}
+#top-nav, #main-part, #second-part, footer, 
+#main-part figure, #main-part figure img, #second-part article{
+	position: relative;
+}
+header, footer, .center, #second-part .fa{
+	text-align: center;
+}
+#second-part #submit-btn i, .more-btn:hover{
+	background-color: #ccc;
+}
+textarea, #second-part input, #right-menu input{
+	border: 1px solid #ccc;
+}
+.more-btn, #second-part .fa{
+	border: 1px solid #ccc;
+}
+header, #top-nav, #second-part i:hover{
+	background-color: #FFF;
+}
+figcaption, .more-btn, #second-part, a, i, textarea, input, p{
+	color: #ccc;
+}
+#second-part .fa{
+	color: #FFF;
+}
+h1, #second-part #contact-form i,.main-menu a:hover,
+ .main-menu a:hover, #second-part .fa:hover{
+	color: #222;
+}
+#second-part input, textarea, #second-part{
+	background-color: #222;
+}
+#top-nav, .shoot, .main-menu .fa-arrow-right, .more-btn, 
+footer nav, #search-input{
+	display: none;
+}
+header, input, .main-menu li, #main-part, #second-part, 
+footer, figure, article, textarea, .more-btn{
+	box-sizing: border-box;
+}
+.main-menu li, .main-menu a, article p, #main-part figure img,
+ .clearfix::after{
+	display: block;
+}
+.left-menu, .centered img, p, .contact-info, .contact-info img, #submit{
+	float: left;
+}
+ #top-header h1 img, .main-menu .fa-arrow-right{
+	vertical-align: middle;
+}
+#main-part, #second-part, footer{
+	top: 3.75em;
+}
+.more-btn:hover{
+	background-color: #ccc;
+	color: #000; 
+}
+
+/*Header*/
+header{
+	position: fixed;
+	top: 0;
+	height: 3.75em;
+	z-index: 1;
+}
+#top-page{
+	max-width: 30em;
+	min-width: 20em;
+}
+.container{
+	margin: auto;
+}
+.center{
+	max-height: 2.5em;
+	margin: 0.5em auto 0 ;
+}
+h1{	
+	font-size: 1.25em;
+}
+#top-header h1{
+	position: fixed;
+	display: inline-block;
+	width: 50%;
+	right: 25%;
+}
+.left-menu, .right-menu{
+	width: 25%;
+}
+.left-menu{
+	width: 0.875em; /*Avoid the logo offset*/
+	line-height: 2em;
+}
+#right-menu{
+	position: relative;
+	float: right;
+}
+.fa-search, #search .fa-times{
+	line-height: 3.25em;
+	text-align: center;
+	position: relative;
+}
+#top-nav{
+	position: absolute;
+	top:3.5em;
+	z-index: 1;
+}
+.main-menu li{
+	padding: 1em 0;
+	border-bottom: 1px solid #ccc;
+}
+.main-menu ul li:last-child{
+	border-bottom: none;
+}
+.main-menu a{
+	text-align: left;
+ 	margin: 0 auto;
+}
+.main-menu .fa-arrow-right{
+	line-height: 1em;
+	float: right;
+ 	border: none;
+}
+
+/******
+Contents
+******/
+
+/*Main-part*/
+#main-part figure{
+	float: left;
+}
+#main-part figure img{
+	border: 0;
+}
+figcaption{
+	width: 100%;
+	height: 7.5em;
+	background-color: rgba(0,0,0,0.5);
+	position: absolute;
+	overflow: hidden;
+	bottom: 0;
+	transition: height 1s;
+}
+#main-part figcaption:hover{
+	height: 100%;
+}
+.centered{
+	margin: auto;
+}
+h2{
+	margin: 1.5em 0 1.25em 0;
+}
+.centered img, p{
+	margin-right: 0.25em;
+}
+.centered p{
+	margin: 0 1.5em 0 0;
+}
+.always-visible p{
+	line-height: 1.25em;
+}
+.hidden-content{
+	margin-top: 2em;
+}
+.hidden-content p{
+	font-size: 0.875em;
+}
+
+/*Second-part*/
+#second-part{
+	padding-bottom: 0.75em;
+	z-index: 5;
+}
+article p{
+	margin-bottom: 2em;
+}
+#second-part article{
+	margin: 0 auto 2em;
+}
+#about p:last-child{
+	margin-bottom: 3em;
+}
+#second-part article h3{
+	line-height: 4em;
+}
+#second-part .fa{
+	line-height: 2.25em;
+	width: 2.5em;
+	height: 2.5em;
+}
+#info{
+	margin-top: 4em;
+}
+.contact-info{
+	margin-bottom: 2em; 
+	width: 100%;
+}
+.contact-info img{
+	margin-right: 2em;
+}
+.contact-info h4{
+	line-height: 1.5em;
+}
+#second-part #contact-form{
+	margin-top: 5em;
+}
+#second-part #contact-form input, #second-part textarea{
+	margin-bottom: 1em;
+} 
+#second-part #contact-form input{
+	width: 11.25em;
+	height: 3.125em;
+	display: block;
+}
+#second-part #contact-form #submit{
+	width: 6.25em;
+}
+#second-part textarea{
+	width: 95%;
+	height: 7.5em;
+}
+#submit-btn{
+	max-width: 50%;
+}
+#second-part #submit-btn i{
+	height: 2.6em;
+}
+
+/*Footer*/
+footer{
+	background-color: #292929;
+	height: 6.25em;	
+	top: 3.71em;
+}
+footer p{
+	width: 95%;
+	margin: 1em auto;
+}
+
+
+/*****
+Media Queries
+*****/
+
+/*Centering content between 480px & 639px*/
+@media (min-width: 480px) and (max-width: 639px){
+	#top-page{
+		width: 30em;
+	}
+	.wrap{
+		width: 30em;
+	}
+	.hidden-content p{
+		font-size: 1em; 
+	}
+}
+
+/*Two-Column*/
+@media (min-width: 640px){
+	#top-page{
+		max-width: 100%;
+	}
+	.shoot{
+		display: inline-block;
+		text-transform: uppercase;
+		line-height: 34px;
+		position: relative;
+		top: 3px;
+	}
+	#main-part figure{
+		float: left;
+		width: 50%;
+	}
+	.centered p{
+		margin-bottom: 2em;
+	}
+	#main-part figcaption:hover .more-btn{
+		display: block;
+	}
+	.hidden-content{
+		margin-top: 0;
+		font-size: 0.875em;
+	}
+	.hidden-content p{
+		margin-bottom: 1em;
+	}
+	.more-btn{
+		text-align: center;
+		line-height: 3em;
+		width: 8.125em;
+		height: 3.125em;
+	}
+	#second-part #contact-form input{
+		width: 45%;
+	}
+
+/*Content adjustment at 768px(min)*/
+@media (min-width: 768px){
+	.hidden-content{
+		font-size: 1em;
+	}
+	#second-part article{
+		width: 50%;
+		float: left;
+	}
+	#article-second-part{
+		width: 75%;
+		margin: auto;
+	}
+	#second-part article:last-child{
+		width: 100%;
+	}
+	.article-content{
+		height: 22.125em;
+		margin: auto;
+	}
+	#second-part p{
+		width: 80%;
+	}
+	#keep-in-touch{
+		z-index: 1;
+	}
+	form{
+		width: auto;
+	}
+	#second-part #contact-form{
+		margin-top: 0; 
+	}
+	#second-part #contact-form input{
+		float: left;
+		width: 32%;
+		margin-right: 1%;
+		display: inline-block;
+	}
+	#second-part #contact-form #submit{
+		margin-right: 0;
+	}
+	#second-part #submit-btn i{
+		height: 2.65em;
+	}
+	#second-part textarea{
+		width: 98%;
+	}
+}
+
+/*Full width*/
+@media screen and (min-width: 1280px){
+	header{
+		height: 4.25em;
+		border-bottom: 1px solid grey;
+	}
+	footer div, footer li, footer nav, #top-nav, #top-nav li, #top-nav li a{
+		display: inline-block;
+	}
+	#copyright, footer li, 	#top-header h1, #main-part figure, #top-nav li{
+		float: left;
+	}
+	.left-menu{
+		display: none;
+	}
+	/*Ajout & changement projet en groupe*/
+	#search{
+		width: 5%;
+		float: right;
+		display: inline-block;
+	}
+	#search-field{
+		width: 100%;
+		height: 3em;
+		position: fixed;
+		display: none;
+		top:4.26em;
+		z-index: 1;
+	}
+	#login{
+		display: inline-block;
+		margin-top: 1em;
+	}
+	#login input{
+		width: 8em;
+		margin-right: 0.1em;
+		float: left;
+	}
+
+	#top-page #login a{
+		margin: 0;
+		font-size: 0.5em;
+		float: left;
+	}
+	#search-input{
+		display: block;
+		background-color: #FAFAFA;
+		width: 100%;
+		height: 3em;
+		border: 1px solid grey;
+	}
+	/*fin ajout projet groupe*/
+	#top-header h1{
+		line-height: 2em;
+		position: inherit;
+	}
+ 	#top-nav, #second-part article:last-child{
+		width: 50%;
+	}
+	#top-nav ul, #article-second-part, footer .container{
+		margin: auto;
+	}
+	footer nav ul{
+		float: right;
+		height: 100%;
+	}
+	#top-nav{
+		position: relative;
+		top: 0;
+	}
+	#top-nav li a{
+		text-align: inherit;
+	}
+	#top-nav li{
+		border: none;
+		width: 14%;
+	}
+	#top-header h1{
+		width: 10%;
+	}
+	 #right-menu{
+	 	width: 20%;
+	 }
+	#main-part, #second-part, footer{
+		top: 4.25em;
+	}
+	#main-part figure{
+		width: 25%;
+	}
+	.hidden-content{
+		font-size: 1.25em;
+	}
+	.more-btn{
+		margin: 2em auto;
+	}
+	#article-second-part{
+		padding-top: 1em;
+	}
+	#second-part article{
+		width: 25%;
+	}
+	#article-second-part, footer .container{
+		width: 73em;
+	}
+	.contact-info img{
+		margin-right: 1em;
+	}
+	#copyright, footer nav{
+		height: 5em;
+	}
+	#copyright{
+		width: 30%;
+	}
+	#copyright p{
+		width: auto;
+		margin: 1.25em 0;
+	}
+	footer nav{
+		line-height: 6em;
+		width: 70%;
+	}
+	footer li a{
+		padding: 0 1em; 
+	}
+	#top-nav a:hover, footer li a:hover{
+		border-bottom: 1px solid #ccc;
+		transition left 0.2s;
+	}
+	/*Ajout projet en groupe*/
+	/*Page de contenu ajouter*/
+	.content{
+		padding-top: 1em;
+		position: relative;
+		display: block;
+		top: 4.25em;
+		width: 100%;
+		height: auto;
+		background-color: #FFF;
+	}
+	.content-centered{
+		max-width: 54.375em;
+		margin: 0 auto 0;
+		min-height: 56.250em;
+		text-align: center;
+	}
+	.content-centered figure{
+		margin: auto;
+	}
+	.user-comments{
+		margin: 2em auto;
+		width: 60%;
+	}
+	.content .user-comments{
+		margin: 2em 1em 3em;
+	}	
+	.user-comments img, 
+	.user-comments h2,
+	.user-comments h4{
+		display: inline-block;
+		font-size: 1em;
+		float: left;
+		color: #ccc;
+		margin: 0 2em 0 0;
+	}
+	.user-comments h2,
+	.user-comments h4{
+		line-height: 4em;
+	}
+
+	.content-centered p{
+		margin: 2em auto 0;
+	}
+	.topic{
+		margin-bottom: 1em;
+		padding: 4em;
+		border-bottom: 1px solid #ccc;
+	}
+	.comments-box{
+		width: 80%;
+		box-sizing: border-box;
+		text-align: center;
+		margin: 0 auto;
+		padding-bottom: 2em;
+		border-bottom: 1px solid #ccc;
+	}
+	.comments-submit{
+		width: 100%;
+		margin: 0;
+		font-size: 1.5em;
+		float: left;
+	}
+	.comments-submit form{
+		margin-bottom: 2em;
+	}
+	.comments-submit textarea{
+		width: 100%;
+		max-width: 100%;
+		height: 10em;
+		max-height: 15em;
+		background-color: #444;
+		color: #FFF;
+	}
+	.comments-submit form input{
+
+		margin: 1em auto 2em;
+		color: #444;
+		background-color: #FFF;
+		border: 1px solid #444;
+		box-sizing: border-box;
+		line-height: 2em;
+	}
+	.page-content{
+		min-height: 50.2em;
+		padding:1em 0;
+		position: relative;
+		display: block;
+		top: 4.25em;		
+		height: auto;
+		background-color: #FFF;
+	}
+
+	/*Page recherche de topic*/
+	.topics{
+		width: 60%;
+	}
+	.page-content-centered{
+		margin: 1em auto;
+	}
+	.topics-box{
+		width: 100%;
+		margin: 1em auto;
+		box-sizing: border-box;
+		border: 1px solid #ccc;
+	}
+	.topics-box .always-visible img, 
+	.topics-box .always-visible h2,
+	.topics-box .always-visible h3,
+	.topics-box .always-visible h4{
+		display: inline-block;
+		font-size: 1em;
+		float: left;
+		color: #444;
+		margin: 0 2em 0 0;
+	}
+	.topics-box .always-visible h2,
+	.topics-box .always-visible h4{
+		vertical-align: middle;
+	}
+
+	/*Page profil*/
+	.users-panel{
+		width: 50%;
+		background-color: #FFF;
+		margin: 3em auto 0;
+		border: 1px solid #FFF;
+	}
+	.info-box{
+		margin-top: 1em;
+		width: 100%;
+		height: 5em;
+		border-bottom: 1px solid #ccc;
+	}
+	.info-box img{
+		float: left;
+		padding: 0.5em;
+		margin-left: 1em;
+	}
+	.info-box a, .info-box h4{
+		float: left;
+		line-height: 4em;
+		margin-left: 2em; 
+	}
+	.info-box a{
+		line-height: 4.6em;
+		margin-left: 2em 
+	}	
+	.users-panel input{
+		float: right;
+		height: 2em;
+		margin-right: 2em;
+		margin-top: 1.25em;
+	}
+	.users-panel #tof{
+		float: right;
+		margin-right: 1em;
+		height: auto;
+	}
+	.dark, .meta{
+		background-color: #444;
+		border: none;
+		margin-top: 0;
+	}
+	.meta{
+		background-color: #888;
+	}
+	.friends{
+		display: inline-block;
+	}
+
+	/*Page inscription*/
+	#inscription-aside{
+		background-color: #444;
+		text-align: center;
+		width: 100%;
+	}
+	#inscription-aside img{
+		margin: 1em 0 2em 0;
+	}
+	#inscription-aside h1{
+		color: #FFF;
+		padding-bottom: 2em;
+		margin-bottom: 1em;
+	}
+	.inscription, .profil{
+		background-color: #525252;
+	}
+	#inscription-form{
+		width: 20%;
+		box-sizing: border-box;
+		background-color: #FFF; 
+		border: 1px solid grey;
+		margin: 5em auto;
+	}
+	#inscription-form input{
+		display: block;
+		margin: 0 0 1em 0;
+	}
+	#inscription-form label{
+		margin: 0 0 2em 0;
+	}
+	#inscription-form input, #inscription-form label{
+		margin-left: 3em;
+	}
+	#inscription-form input[type="submit"]{
+		margin: 3em auto 2em;
+		color: #444;
+		background-color: #FFF;
+		border: 1px solid #444;
+		box-sizing: border-box;
+		line-height: 2em;
+	}
+	#inscription-form input[type="submit"]:hover{
+		background-color: #444;
+		color: #FFF;
+	}
+	#error-label{
+		margin: 0.5em auto;
+		text-align: center;
+	}
+}
+
