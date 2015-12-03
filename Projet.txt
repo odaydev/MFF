@@ -31,10 +31,12 @@ A faire
 -un arbre
 
 //HTML
--une page contenu
--page de liste des topics
--formulaire inscription / login
--page profil
+-une page contenu                       OK
+-page de liste des topics               OK
+-formulaire inscription / login         OK
+-page profil                            OK
+
+-> ++(03/12) Faire une page de création de topics, intégration du bouton de déconnexion
 
 //PHP-mySQL
 -BDD(on peut réutiliser celle du forum + amis)
@@ -58,5 +60,8 @@ A faire
 Nom / pseudo / mail / tel / date de naissance / date d'inscription / date de derniere connexion / photo / mot de passe / contact amis
 
 
-/**/
-
+/*03-12*/
+  ->valider la BDD ensemble
+  ->page ajout topics, btn déconnexion
+  ->découpage du html pour le php
+  ->voir code php pour l'ajout de topic et commentaire
