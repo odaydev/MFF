@@ -7,8 +7,8 @@
 	$kw = $_GET['kw'];
 
 	//requête SQL de recherche
-	$sql = "SELECT id, texte_post, creator_id, created FROM post 
-			WHERE title_post LIKE :keyword";
+	$sql = "SELECT u.login, p.texte_post, p.created FROM users u 
+			INNER JOIN post p ON u.id = p.creator_id AND p.keywords LIKE :keyword";
 	
 	$statement = $pdo->prepare($sql);
 
@@ -23,12 +23,13 @@
 
 	//boucle sur les résultats afin de générer du HTML à renvoyer en réponse
 	foreach($posts as $post){
-	?>
-
-		<a href="#<?= $post['id'] ?>" title="<?= $post['title_post'] ?>">
-			<img src="img/<?= $post['image_post'] ?>" alt="<?= $post['title_post'] ?>">
-		</a>
-	
+		// print_r ($post);
+		echo ("Creator : " . $post['login'] . "\n");
+		echo ("Created : " . $post['created'] . "\n");
+		echo ($post['texte_post'] . "\n");
+	/* ?>
+		<img src="img/<?= $post['image_post'] ?>" alt="">
 	<?php
+	*/
 	} //fin du foreach
 	?>
