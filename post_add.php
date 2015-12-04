@@ -14,8 +14,9 @@ include 'includes/functions.php';
 			}
 		
 		$user = new verif($id,$pdo);
-		$creator = $id; 
+		 
 	}
+	$creator = 5;
 // include 'libs/verif.class.php';
 
 
@@ -34,13 +35,13 @@ if (isIsset($_POST) == "true") {
 	//$extensions = explode('.', $_FILES['fichier']['name']);
 	//$extension = end($extensions);
 	$fichier = basename($_FILES['fichier']['name']);
-	$dossier = "/user_img";
-	$target = $dossier . $fichier . $extension;
+	$dossier = "user_img/";
+	$target = $dossier.$fichier.$extension;
 
-	if ( !in_array($extension, $extensions) ){
+	/* if ( !in_array($extension, $extensions) ){
 		$return[0] = 2; 
 		$return[1] = "Extension non autorisée !";
-	} else {
+	} else { */
 
 		$tmp_name = $_FILES['fichier']['tmp_name'];
 		//$target = 'user_img\\' . uniqid() . '-' . $_FILES['fichier']['name'];
@@ -49,12 +50,15 @@ if (isIsset($_POST) == "true") {
 		if(move_uploaded_file($tmp_name, $dossier)) {
 
 			/*Requete*/
-			$pdo = new PDO('mysql:host=localhost;dbname=postit', 'root');
-			$sql = "INSERT INTO post (creator_id, categorie, title_post, image_post, texte_post, created, keywords) 
-			VALUES (?, ?, ?, ?, ?, ?, ?);";
-
+			include 'libs/verif.class.php';
+			$db = new connect('mff');
+			$pdo = $db->getPDO();
+			// $pdo = new PDO('mysql:host=localhost;dbname=postit', 'root');
+			$sql = "INSERT INTO post (id,categorie,title_post,image_post,texte_post,creator_id,created,keywords) 
+			VALUES ('',?,?,?,?,?,?,?)";
+			// debug($creator,1);
 			$statement = $pdo->prepare($sql);
-			$statement->execute([$creator, $categorie, $title, $target, $message, $date, $meta]);
+			$statement->execute([$categorie, $title, $target, $message, $creator, $date, $meta]);
 
 			$return[0] = 1; 
 			$return[1] = "Votre post a bien été envoyé ! ";
@@ -64,11 +68,11 @@ if (isIsset($_POST) == "true") {
 				$return[1] = "L'upload de l'image a échoué.";
 			}
 
-		} 
+		
 	} else {
 		$return[0] = 2; 
 		$return[1] = "Veuillez remplir tous les champs ! "; 
-}
+		}
 
 displayInfo($return);
 header('Location: addcontent.php');

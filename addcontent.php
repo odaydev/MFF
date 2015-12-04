@@ -21,8 +21,8 @@
 			<label for="categories">Categories</label>
 			<input type="text" placeholder="categories" name="categories" value="" />
 
-			<label for="meta">Meta</label>
-			<input type="text" placeholder="meta" name="meta" value="" />
+			<label for="meta">Keywords</label>
+			<input type="text" placeholder="meta" name="keywords" value="" />
 
 			<label for="postmessage">Your mood!</label>
 			<textarea type="text" placeholder="postmessage" name="message" value="" /></textarea>
