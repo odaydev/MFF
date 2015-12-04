@@ -122,8 +122,6 @@ class verif{
 			$psw = $_POST['password'];
 			$psw2 = $_POST['secondpassword'];
 			$photo = $_POST['photo'];
-			$presentation = "";
-			$inscription = "";
 
 			$req_log = $pdo->prepare('SELECT * FROM users WHERE login = ?');
 			$req_mail = $pdo->prepare('SELECT * FROM users WHERE email = ?');
@@ -163,8 +161,8 @@ class verif{
 						$token = str_random(60);
 						$created_ts = time();
 
-						$req_insert = $pdo->prepare('INSERT INTO users (id, name,login,password,email,photo,presentation,inscription,birthday,last_connexion,token,created_ts) VALUES ("",?,?,?,?,?,"",NOW(),?,NOW(),?,?)');
-						$req_insert->execute([$name,$login,$hash,$email,$photo,$presentation,$inscription,$birthday,$last_connection,$token,$created_ts]);
+						$req_insert = $pdo->prepare('INSERT INTO users (id,name,login,password,email,photo,presentation,inscription,birthday,last_connexion,token,created_ts) VALUES ("",?,?,?,?,?,"",NOW(),?,NOW(),?,?)');
+						$req_insert->execute([$name,$login,$hash,$email,$photo,$birthday,$token,$created_ts]);
 
 						$id = $pdo->lastInsertId();
 
