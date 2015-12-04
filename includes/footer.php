@@ -24,7 +24,7 @@
 						<aside id="info">
 							<div class="contact-info">
 								<img src="img/location-icon.png" alt="adress" height="24" width="16"/>
-								<h4>No 200, Jospeh Road, Canada</h4>
+								<h4>No 200, Av Balboa, Panamá, Panama</h4>
 							</div>
 							<div class="contact-info">
 								<img src="img/phone-icon.png" alt="phone number" height="24" width="16"/>
@@ -32,7 +32,7 @@
 							</div>
 							<div class="contact-info">
 								<img src="img/mail-icon.png" alt="adress" height="24" width="16"/>
-								<h4>info@kulerthemes.com</h4>
+								<h4>info@MFF.com</h4>
 							</div>
 						</aside>
 					</div>

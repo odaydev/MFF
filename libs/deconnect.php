@@ -14,3 +14,5 @@ session_destroy();
 $_SESSION["success"] = "Vous êtes bien déconneté !";
 
 header("Location:../index.php");
+
+		

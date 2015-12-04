@@ -14,11 +14,11 @@ function displayInfo($donnees){
 
 	debug($donnees);
 	if($donnees[0] == 1){
-		$_SESSION['success'] = $donnees[1];
+		$_SESSION['message']['success'] = $donnees[1];
 		}else if($donnees[0] == 2){
-			$_SESSION['error'] = $donnees[1];
+			$_SESSION['message']['error'] = $donnees[1];
 		}else if($donnees[0] == 3){
-			$_SESSION['info'] = $donnees[1];
+			$_SESSION['message']['info'] = $donnees[1];
 		}
 
 		//return header("Location:../inscription.php");		

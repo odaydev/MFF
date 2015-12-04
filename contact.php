@@ -1,5 +1,5 @@
 <?php
-
+session_start();
 include 'includes/functions.php';
 
 
@@ -11,14 +11,26 @@ if($result == "true"){
 	$email = $_POST['email'];
 	$adresse = $_POST['adresse'];
 	$message = $_POST['message'];
+	$date = date("d-m-Y H:i:s");
 
-	$msg = $name.'\n'.$email.'\n'.$adresse.'\n'.$message;
+	$msg = "\r\n\r\n";
+	$msg .= $date."\r\n".$name."\r\n".$email."\r\n".$adresse."\r\n".$message;
 
 
-	$monfichier = fopen('formation/motherFF/contact/contacts.txt', 'r+');
+	$monfichier = fopen('C:\xampp\htdocs\formation\motherFF\contact\contacts.txt', 'a+');
 
+	//fseek($monfichier, 0);
 	fputs($monfichier, $msg);
 
 	fclose($monfichier);
 
+	$return[0] = 1;
+	$return[1] = "Votre message a bien été transmis ! ";
+
+}else{
+	$return[0] = 2;
+	$return[1] = "Erreur lors de la transmission du message ! ";
 }
+
+displayInfo($return);
+header('Location:index.php#contact-form');

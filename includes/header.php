@@ -1,12 +1,17 @@
 <?php session_start();?>
 <?php
- 	if(isset($_SESSION['auth'])){
-	 	require_once('libs/verif.class.php');
-		
-		$db = new connect('mff');	
-		$pdo = $db->getPDO();
+	require_once('libs/verif.class.php');
+	$db = new connect('mff');	
+	$pdo = $db->getPDO();
+ 	if(isset($_SESSION['auth'])){		
 		
 		if(isset($_SESSION['id'])) $id = $_SESSION['id']; else $id = 0;
+		
+		$user = new verif($id,$pdo);
+	}
+	if(isset($_GET['id'])){
+
+		$id = $_GET['id']; 
 		
 		$user = new verif($id,$pdo);
 	}	
@@ -60,7 +65,7 @@
 							<input type="submit" name="connexion" value="connexion" />
 						</form>
 						<!--Disparait si on est logger-->
-						<a href="">Mot de passe oublié</a>
+						<a href="forget.php">Mot de passe oublié</a>
 						
 						<!--Apparait une fois logger-->
 					</div>
@@ -88,16 +93,18 @@
 						<li><a class="center" href="addcontent.php" title="inscription">Post<i class="fa fa-arrow-right"></i></a></li>
 						<?php } ?>
 					</ul>
-					<?php if (isset($_SESSION['success'])) { 
-					echo '<h6 id="error-label" style="color: green;">'.$_SESSION['success'].'</h6>';
-					unset($_SESSION['success']);
-				}else if(isset($_SESSION['error'])){
-							echo '<h6 id="error-label" style="color: red;">'.$_SESSION['error'].'</h6>';
-							unset($_SESSION['error']);
-						}else if(isset($_SESSION['info'])){
-							echo '<h6 id="error-label" style="color: blue;">'.$_SESSION['info'].'</h6>';
-							unset($_SESSION['info']);
-						}//print_r($_SESSION);
+
+					<!-- Affichage des erreurs  -->
+					<?php if (isset($_SESSION['message']['success'])){ 
+						  	echo '<h6 id="error-label" style="color: green;">'.$_SESSION['message']['success'].'</h6>';
+							unset($_SESSION['message']);							
+						}else if(isset($_SESSION['message']['error'])){
+							echo '<h6 id="error-label" style="color: red;">'.$_SESSION['message']['error'].'</h6>';
+							unset($_SESSION['message']);
+						}else if(isset($_SESSION['message']['info'])){
+							echo '<h6 id="error-label" style="color: blue;">'.$_SESSION['message']['info'].'</h6>';
+							unset($_SESSION['message']);
+						}
 			 ?>
 				</nav>
 		</header>
