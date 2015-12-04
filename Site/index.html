@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<title>Post it! | Home</title>
+	<!--Tag for responsive-->
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<!--FontAwesome-->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+	<!--Fonts-->
+	<link href='https://fonts.googleapis.com/css?family=Muli' rel='stylesheet' type='text/css'>
+	<link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+
+	<!--Styles + Reset-->
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/style.css">
+
+	<!--Favicon-->
+	<link rel="icon" type="image/png" href="img/fav-icon.png" />
+	<!--[if IE]><link rel="shortcut icon" type="image/x-icon" href="img/fav-icon.png" /><![endif]-->
+</head>
+
+<body>
+	<div class="wrap">
+	
+		<header id="top-page" class="container clearfix">
+				<div id="top-header" class="center">
+					<h1 class="clearfix">
+						<a id="logo" href="index.html">
+							<img src="img/Logo.png" alt="Shoot | Logo"/>
+							<span class="shoot">Post it!</span>
+						</a>
+					</h1>
+					<i class="fa fa-bars left-menu"></i>
+					<div id="right-menu">
+						<form id="login" class="clearfix" action="" method="POST">
+							<input type="text" placeholder="email" name="auth[email]" value=""/>
+							<input type="password" placeholder="password" name="auth[password]" />
+							<input type="submit" name="action[connexion]" value="connexion" />
+						</form>
+						<!--Disparait si on est logger-->
+						<a href="">Mot de passe oublié</a>
+						<!--Apparait une fois logger-->
+						<!--<a href="">Déconnexion</a>-->
+					</div>
+					<div id="search">
+						<i class="fa fa-search" id="search-icon"></i>						
+					</div>
+				</div>
+				<nav id="top-nav" class="main-menu">
+					<ul>
+						<li><a class="center" href="index.html" title="home">Home<i class="fa fa-arrow-right"></i></a></li>
+						<li><a class="center" href="pages.html" title="pages">Pages<i class="fa fa-arrow-right"></i></a></li>
+						<!--Visible seulement une fois logger-->
+						<li><a class="center" href="profil.html" title="profil">Profil<i class="fa fa-arrow-right"></i></a></li>
+						<!--Disparait si la personne est logger-->
+						<li><a class="center" href="inscription.html" title="inscription">Inscription<i class="fa fa-arrow-right"></i></a></li>
+						<!--Apparait une fois logger, permet de créer un topic-->
+						<li><a class="center" href="addcontent.html" title="inscription">Post<i class="fa fa-arrow-right"></i></a></li>
+					</ul>
+				</nav>
+		</header>
+		<form id="search-field">
+			<input type="search" name="search" id="search-input" value="Search"/>	
+		</form>
+
+		<section id="main-part" class="clearfix">
+			<figure class="img-content">
+					<img src="img/1.png" alt="" width="100%" height="100%" />
+				<figcaption class="hover-description">
+					<div class="centered">
+						<div class="always-visible clearfix">
+							<h2>Ezequeil Gonzalez book.</h2>
+							<img src="img/identity-icon.png" alt="nom de la personne" height="16" width="14"/>
+							<p>Johnny</p>
+							<img src="img/heart-icon.png" alt="j'aime" height="16" width="14"/>
+							<p>15</p>
+							<img src="img/message-icon.png" alt="commentaire" height="16" width="14"/>
+							<p>22</p>
+						</div>
+						<!--Contenu caché, apparait au survol-->
+						<div class="hidden-content clearfix">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<a class="more-btn" href="content.html">Read More</a>
+					</div>
+				</figcaption>
+			</figure>
+			
+			<figure class="img-content" class="clearfix">
+					<img src="img/2.png" alt="" width="100%" height="100%" />
+				<figcaption class="hover-description">
+					<div class="centered">
+						<div class="always-visible clearfix">
+							<h2>Ezequeil Gonzalez book.</h2>
+							<img src="img/identity-icon.png" alt="nom de la personne" height="16" width="14"/><p>Johnny</p>
+							<img src="img/heart-icon.png" alt="j'aime" height="16" width="14"/><p>15</p>
+							<img src="img/message-icon.png" alt="commentaire" height="16" width="14"/><p>22</p>
+						</div>
+						<div class="hidden-content clearfix">
+							<p class="text-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<a class="more-btn" href="">Read More</a>
+					</div>
+				</figcaption>
+			</figure>
+			<figure class="img-content" class="clearfix">
+					<img src="img/3.png" alt="" width="100%"/>
+				<figcaption class="hover-description">
+					<div class="centered">
+						<div class="always-visible clearfix">
+							<h2>Ezequeil Gonzalez book.</h2>
+							<img src="img/identity-icon.png" alt="nom de la personne" height="16" width="14"/><p>Johnny</p>
+							<img src="img/heart-icon.png" alt="j'aime" height="16" width="14"/><p>15</p>
+							<img src="img/message-icon.png" alt="commentaire" height="16" width="14"/><p>22</p>
+						</div>
+						<div class="hidden-content clearfix">
+							<p class="text-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<a class="more-btn" href="">Read More</a>
+					</div>
+				</figcaption>
+			</figure>
+			<figure class="img-content" class="clearfix">
+					<img src="img/4.png" alt="" width="100%"/>
+				<figcaption class="hover-description">
+					<div class="centered">
+						<div class="always-visible clearfix">
+							<h2>Ezequeil Gonzalez book.</h2>
+							<img src="img/identity-icon.png" alt="nom de la personne" height="16" width="14"/><p>Johnny</p>
+							<img src="img/heart-icon.png" alt="j'aime" height="16" width="14"/><p>15</p>
+							<img src="img/message-icon.png" alt="commentaire" height="16" width="14"/><p>22</p>
+						</div>
+						<div class="hidden-content clearfix">
+							<p class="text-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<a class="more-btn" href="">Read More</a>
+					</div>
+				</figcaption>
+			</figure>
+			<figure class="img-content" class="clearfix">
+					<img src="img/5.png" alt="" width="100%"/>
+				<figcaption class="hover-description">
+					<div class="centered">
+						<div class="always-visible clearfix">
+							<h2>Ezequeil Gonzalez book.</h2>
+							<img src="img/identity-icon.png" alt="nom de la personne" height="16" width="14"/><p>Johnny</p>
+							<img src="img/heart-icon.png" alt="j'aime" height="16" width="14"/><p>15</p>
+							<img src="img/message-icon.png" alt="commentaire" height="16" width="14"/><p>22</p>
+						</div>
+						<div class="hidden-content clearfix">
+							<p class="text-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<a class="more-btn" href="">Read More</a>
+					</div>
+				</figcaption>
+			</figure>
+			<figure class="img-content" class="clearfix">
+					<img src="img/6.png" alt="" width="100%"/>
+				<figcaption class="hover-description">
+					<div class="centered">
+						<div class="always-visible clearfix">
+							<h2>Ezequeil Gonzalez book.</h2>
+							<img src="img/identity-icon.png" alt="nom de la personne" height="16" width="14"/><p>Johnny</p>
+							<img src="img/heart-icon.png" alt="j'aime" height="16" width="14"/><p>15</p>
+							<img src="img/message-icon.png" alt="commentaire" height="16" width="14"/><p>22</p>
+						</div>
+						<div class="hidden-content clearfix">
+							<p class="text-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<a class="more-btn" href="">Read More</a>
+					</div>
+				</figcaption>
+			</figure>
+			<figure class="img-content" class="clearfix">
+					<img src="img/7.png" alt="" width="100%"/>
+				<figcaption class="hover-description">
+					<div class="centered">
+						<div class="always-visible clearfix">
+							<h2>Ezequeil Gonzalez book.</h2>
+							<img src="img/identity-icon.png" alt="nom de la personne" height="16" width="14"/><p>Johnny</p>
+							<img src="img/heart-icon.png" alt="j'aime" height="16" width="14"/><p>15</p>
+							<img src="img/message-icon.png" alt="commentaire" height="16" width="14"/><p>22</p>
+						</div>
+						<div class="hidden-content clearfix">
+							<p class="text-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<a class="more-btn" href="">Read More</a>
+					</div>
+				</figcaption>
+			</figure>
+			<figure class="img-content" class="clearfix">
+					<img src="img/8.png" alt="" width="100%"/>
+				<figcaption class="hover-description">
+					<div class="centered">
+						<div class="always-visible clearfix">
+							<h2>Ezequeil Gonzalez book.</h2>
+							<img src="img/identity-icon.png" alt="nom de la personne" height="16" width="14"/><p>Johnny</p>
+							<img src="img/heart-icon.png" alt="j'aime" height="16" width="14"/><p>15</p>
+							<img src="img/message-icon.png" alt="commentaire" height="16" width="14"/><p>22</p>
+						</div>
+						<div class="hidden-content clearfix">
+							<p class="text-description">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<a class="more-btn" href="">Read More</a>
+					</div>
+				</figcaption>
+			</figure>
+		</section>
+	
+		<section id="second-part" class="clearfix">
+			<div id="article-second-part">
+				<article id="about">
+					<div class="article-content">
+						<h3>About MFF</h3>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat.</p>
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua.</p>
+					</div>
+				</article>
+				<article id="keep-in-touch">
+					<div class="article-content">
+						<h3>Keep in touch</h3>
+						<aside id="social-connect">
+							<a href="" title="Shoot facebook"><i class="fa fa-facebook-official"></i></a>
+							<a href="" title="Shoot twitter"><i class="fa fa-twitter"></i></a>
+							<a href="" title="Shoot google+"><i class="fa fa-google-plus"></i></a>
+							<a href="" title=" Shoot dribbble"><i class="fa fa-dribbble"></i></a>
+							<a href="" title="Shoot behance"><i class="fa fa-behance"></i></a>
+						</aside>
+						<aside id="info">
+							<div class="contact-info">
+								<img src="img/location-icon.png" alt="adress" height="24" width="16"/>
+								<h4>No 200, Jospeh Road, Canada</h4>
+							</div>
+							<div class="contact-info">
+								<img src="img/phone-icon.png" alt="phone number" height="24" width="16"/>
+								<h4>+44 (0) 800 765 4321</h4>
+							</div>
+							<div class="contact-info">
+								<img src="img/mail-icon.png" alt="adress" height="24" width="16"/>
+								<h4>info@kulerthemes.com</h4>
+							</div>
+						</aside>
+					</div>
+				</article>
+				<article id="contact-form">
+					<h3>Contact</h3>
+					<form>
+						<input type="text" name="name" placeholder="Your name here" placeholder="" id="name" class="clearfix"/>
+						<input type="text" name="email" placeholder="Your email here" placeholder="" id="email" class="clearfix"/>
+						<input type="text" name="adress" placeholder="Your adress here" placeholder="" id="adress" class="clearfix"/>
+						<textarea type="text" name="name" placeholder="Your message here" id="message" class="clearfix"></textarea>
+						<div id="submit-btn">
+							<input id="submit" type="submit" placeholder="SEND"/>
+							<i class="fa fa-arrow-right"></i>
+						</div>
+					</form>
+				</article>
+		</div>
+		</section>
+
+		<footer>
+			<div class="container">
+				<div id="copyright">
+					<p>&copy; 2014MotherFucking Forum. Built by MFF Team.</p>
+					<p>Premium  Themes by MFF Team.</p>
+				</div>
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="pages.html">Pages</a></li>
+						<li><a href="profil.html">Profil</a></li>
+						<li><a href="inscription.html">Inscription</a></li>
+					</ul>
+				</nav>
+			</div>
+		</footer>
+
+	</div>
+<!--Jquery-->
+     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script> 
+     <script src="js/main.js"></script>
+
+</body>
+</html>
