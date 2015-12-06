@@ -31,18 +31,18 @@ A faire
 -un arbre
 
 //HTML
--une page contenu                       OK
--page de liste des topics               OK
--formulaire inscription / login         OK
--page profil                            OK
+-une page contenu                                                                                                 OK
+-page de liste des topics                                                                                         OK
+-formulaire inscription / login                                                                                   OK
+-page profil                                                                                                      OK
 
--> ++(03/12) Faire une page de création de topics, intégration du bouton de déconnexion
+-> ++(03/12) Faire une page de création de topics, intégration du bouton de déconnexion                           OK
 
 //PHP-mySQL
--BDD(on peut réutiliser celle du forum + amis)
--login / inscription
--ajout de topic / message
--gérer le formulaire de contact (BONUS)
+-BDD(on peut réutiliser celle du forum + amis)                                                                    OK
+-login / inscription                                                                                              OK
+-ajout de topic / message                                                                                         OK
+-gérer le formulaire de contact (BONUS)                                                                           OK
 
 //AJAX-jQUERY (BONUS)
 -fonction recherche dans la liste des topics
