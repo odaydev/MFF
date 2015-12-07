@@ -24,6 +24,14 @@ include 'includes/functions.php';
 	}
 ?>
 		<section class="content clearfix animsition">
+			<nav class="nav-slide">
+				<a class="prev" href="">
+					<i class="fa fa-chevron-right fa-3x"></i>
+				</a>
+				<a class="next" href="">
+					<i class="fa fa-chevron-left fa-3x"></i>
+				</a>
+			</nav>
 			<div class="content-centered">
 				<div class="topic clearfix">
 					<figure><img src="<?=$post->image_post;?>"></figure>

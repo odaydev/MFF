@@ -464,6 +464,31 @@ Projet groupe
 	box-sizing: border-box;
 	line-height: 2em;
 }
+/*nav slide content.php*/
+.nav-slide{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 5em;
+}
+.prev, .next{
+	position: absolute;
+	height: 50%;
+	width: 5em;
+}
+.prev{
+	right: 5%;
+}
+.next{
+	left: 5%;
+}
+.fa-chevron-right, .fa-chevron-left{
+	position: absolute;
+	top: 50%;
+}
+.prev:hover .fa-chevron-right, .next:hover .fa-chevron-left{
+	color: #05B1E6;
+}
 /*Pages.php*/
 .topics{
 	width: 80%;
