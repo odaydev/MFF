@@ -1,0 +1,1154 @@
+/*Common*/
+body{
+	font-family: 'Muli', sans-serif;
+	font-weight: 300;
+	background-color: #d2d2d2;
+}
+.wrap{
+	width: 100%;
+	margin: auto;
+}
+.clearfix::after{
+	content: "";
+	clear: both;
+}
+.more-btn:hover{
+	color: #000; 
+}
+
+/*Same CSS for multiple element*/
+.container, #logo, .main-menu, .main-menu li,
+ #main-part, figure, figcaption, #second-part{
+	width: 100%;
+}
+.center, .centered, #second-part article{
+	width: 90%;
+}
+a, i, textarea, input, p{
+	text-decoration: none;
+	font-size: 0.875em;
+}
+a:hover{
+	font-weight: bold;
+}
+h1{
+	font-size: 2em;
+}
+h2, h3{
+	font-size: 1.25em;
+}
+h4{
+	font-size: 1em;
+}
+i{
+	font-size: 0.75em;
+	margin-left: 0.5em;
+}
+figcaption, .more-btn, #second-part, a, i, textarea, input, p{
+	color: #ccc;
+}
+#second-part .fa, #main-part h2{
+	color: #FFF;
+}
+h1, h1 span, #second-part #contact-form i,.main-menu a:hover,
+ .main-menu a:hover, #second-part .fa:hover{
+	color: #222;
+}
+header, #top-header h1, #search-field{
+	position: fixed;
+}
+#top-nav, #main-part, #second-part, footer, 
+#main-part figure, #main-part figure img, #second-part article, 
+#right-menu,  .fa-search, #search .fa-times, .page-content, .content{
+	position: relative;
+}
+.left-menu span, .left-menu span::after, .left-menu span::before,
+#login, #top-nav, figcaption, .nav-slide, .prev, .next,
+.fa-chevron-right, .fa-chevron-left{
+	position: absolute;
+}
+header, footer, .center, #second-part .fa{
+	text-align: center;
+}
+#second-part #submit-btn i, .more-btn:hover, #second-part #submit-btn i, 
+.left-menu span, .left-menu span::after,
+.left-menu span::before{
+	background-color: #ccc;
+}
+header, #top-nav, #second-part i:hover, .topics-box, .users-panel, 
+.comments-submit form input, .content, #reslut_search, .page-content,
+#inscription-form, #addcontent-form, #inscription-form input[type="submit"], 
+#addcontent-form input[type="submit"]{
+	background-color: #FFF;
+}
+#second-part input, textarea, #second-part{
+	background-color: #222;
+}
+textarea, #second-part input, #right-menu input, .more-btn, #second-part .fa,
+#inscription-form, .topics-box, #reslut_search{
+	border: 1px solid #ccc;
+}
+header, input, .main-menu li, #main-part, #second-part, 
+footer, figure, article, textarea, .more-btn{
+	box-sizing: border-box;
+}
+#top-nav, .shoot, .main-menu .fa-arrow-right, 
+footer nav, #login, #search-field, .connected{
+	display: none;
+}
+.main-menu li, .main-menu a, article p, #main-part figure img,
+.clearfix::after, #second-part #contact-form input, .content, 
+.left-menu span, .left-menu span::after, .left-menu span::before,
+.page-content, .page-content, .topics-box .always-visible img,
+.topics-box .always-visible h2, .topics-box .always-visible h3,
+.topics-box .always-visible h4{
+	display: block;
+}
+#top-header h1, #search, .friends{
+	display: inline-block;
+}
+.left-menu, .centered img, p, .contact-info, .contact-info img,
+ #submit, .connected, #main-part figure, #reslut_search, #logout,
+.topics-box .always-visible img, .topics-box .always-visible h2,
+.topics-box .always-visible h3, .topics-box .always-visible h4,
+.info-box img, .info-box a, .info-box h4, .users-panel #tof{
+	float: left;
+}
+.main-menu .fa-arrow-right, #right-menu, #mini-login, #search,
+.users-panel input{
+	float: right;
+}
+ #top-header h1 img, .main-menu .fa-arrow-right{
+	vertical-align: middle;
+}
+#main-part, #second-part, footer{
+	top: 3.75em;
+}
+.more-btn:hover{
+	color: #000; 
+}
+#login, .dark, .meta, #inscription-aside, #add-aside, .comments-submit textarea, 
+#inscription-form input[type="submit"]:hover, 
+#addcontent-form input[type="submit"]:hover{
+	background-color: #444;
+}
+header, .info-box, .comments-box, .topic, #reslut_search div{
+	border-bottom: 1px solid #ccc;
+}
+/*Header*/
+header{
+	top: 0;
+	height: 3.75em;
+	z-index: 9999;
+}
+#top-page{
+	max-width: 30em;
+	min-width: 20em;
+}
+.container{
+	margin: auto;
+}
+.center{
+	max-height: 2.5em;
+	margin: 0.5em auto 0 ;
+}
+h1{	
+	font-size: 1.25em;
+}
+#top-header h1{
+	width: 50%;
+	right: 25%;
+}
+.left-menu, .right-menu{
+	width: 25%;
+}
+.left-menu{
+	width: 1.875em; /*Avoid the logo offset*/
+	height: 1em;
+	margin-top: 1em;
+}
+.left-menu span,
+.left-menu span::after,
+.left-menu span::before{
+	cursor: pointer;
+	width: 1.5em;
+	height: 0.2em;
+	content: "";
+}
+.left-menu span::before{
+	top: -0.5em;
+}	
+.left-menu span::after{
+	bottom: -0.5em;
+}
+.left-menu span,
+.left-menu span::after,
+.left-menu span::before{
+	transition: all 500ms ease-in-out;
+}
+.left-menu.active span::after,
+.left-menu.active span::before{
+	top: 0;
+}
+.left-menu.active span{
+	background-color: transparent; 
+}
+.left-menu.active span::before{
+ 	transform: rotate(45deg);
+ }	
+.left-menu.active span::after{
+	 transform: rotate(-45deg);
+}
+#mini-login{
+	margin-right: 1em;
+	line-height: 2.2em;
+}
+#right-menu{
+	width: 20%;
+}
+.fa-search, #search .fa-times{
+	line-height: 2.1em;
+	text-align: center;
+}
+#login{
+	top: 3.5em;
+	right: 0;
+	z-index: 1;
+	padding: 0.5em;
+}
+#login input{
+	margin-top: 0.5em;
+}
+#login input[type=submit]{
+	margin: 0.5em 3em;
+}
+#search{
+	width: 2%;
+}
+#search-field{
+	width: 100%;
+	max-width: 30em;
+	height: 3em;
+	top:3.75em;
+	z-index: 1;
+}
+#search-input{
+	width: 100%;
+	height: 3em;
+}
+#reslut_search a{
+	color: #444;		
+}
+#top-nav{
+	top:3.5em;
+	left: 0;
+	z-index: 1;
+}
+.main-menu li{
+	padding: 1em 0;
+	border-bottom: 1px solid #ccc;
+}
+.main-menu ul li:last-child{
+	border-bottom: none;
+}
+.main-menu a{
+	text-align: center;
+ 	margin: 0 auto;
+}
+.main-menu .fa-arrow-right{
+	line-height: 1em;
+ 	border: none;
+}
+
+/******
+Contents
+******/
+
+/*Main-part*/
+#main-part figure img{
+	width: 100%;
+	min-width: 20em;
+	/*max-width: 30em;*/
+	height: 100%;
+	min-height: 20em;
+	/*max-height: 30em;*/
+	border: 0;
+}
+figcaption{
+	width: 100%;
+	height: 7.5em;
+	background-color: rgba(0,0,0,0.5);
+	overflow: hidden;
+	bottom: 0;
+	transition: height 1s;
+}
+.more-btn{
+	padding: 1em;
+	height: 5em;
+	width: 3em;
+	margin: 1em auto;
+}
+
+/*Ajout Post it*/
+#main-part #toficon, #main-part .hearticon, #main-part #messageicon{
+	max-width: 1.5em;
+	min-width: 1em;
+	max-height: 1.5em;
+	min-height: 0.875em;
+}
+#main-part figcaption:hover{
+	height: 100%;
+}
+.centered{
+	margin: auto;
+}
+h2{
+	margin: 1.5em 0 1.25em 0;
+}
+.centered img, p{
+	margin-right: 0.25em;
+}
+.centered p{
+	margin: 0 1.5em 0 0;
+}
+.always-visible p{
+	line-height: 1.75em;
+}
+.hidden-content{
+	margin-top: 2em;
+}
+.hidden-content p{
+	margin-bottom: 3em;
+	font-size: 0.875em;
+	max-height: 10em;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	-moz-text-overflow: ellipsis;
+}
+
+/*Second-part*/
+#second-part{
+	padding-bottom: 0.75em;
+	z-index: 5;
+}
+article p{
+	margin-bottom: 2em;
+}
+#second-part article{
+	margin: 0 auto 2em;
+}
+#about p:last-child{
+	margin-bottom: 3em;
+}
+#second-part article h3{
+	line-height: 4em;
+}
+#second-part .fa{
+	line-height: 2.25em;
+	width: 2.5em;
+	height: 2.5em;
+}
+#info{
+	margin-top: 4em;
+}
+.contact-info{
+	margin-bottom: 2em; 
+	width: 100%;
+}
+.contact-info img{
+	margin-right: 2em;
+}
+.contact-info h4{
+	line-height: 1.5em;
+}
+#second-part #contact-form{
+	margin-top: 5em;
+}
+#second-part #contact-form input, #second-part textarea{
+	margin-bottom: 1em;
+} 
+#second-part #contact-form input{
+	width: 11.25em;
+	height: 3.125em;
+}
+#second-part #contact-form #submit{
+	width: 6.25em;
+}
+#second-part textarea{
+	width: 95%;
+	height: 7.5em;
+}
+#submit-btn{
+	max-width: 50%;
+}
+#second-part #submit-btn i{
+	height: 2.6em;
+}
+
+/*Footer*/
+footer{
+	background-color: #292929;
+	height: 6.25em;	
+	top: 3.71em;
+	z-index: 2;
+}
+footer p{
+	width: 95%;
+	margin: 1em auto;
+}
+
+/*
+Projet groupe
+*/
+.hearticon{
+	float: left;
+	position: relative;
+}
+#like{
+}
+.page-content{
+	min-height: 50.2em;
+	padding:1em 0;
+	top: 3.75em;		
+	height: auto;
+}
+#forget{
+	line-height: 2.6em;
+}
+/*Loader*/
+#loader{
+	position: absolute;
+	top:50%;
+	left: 50%;
+	background-image: url("../img/loader.gif");
+	display: none;
+}
+/*header*/
+#reslut_search{
+	width: 100%;
+	height: auto;
+	max-height: 15em;
+	border-top: none;
+	box-sizing: border-box;
+}
+#reslut_search div{
+	text-align: center;
+	margin: auto;
+	height: auto;
+	min-height: 2em;
+	box-sizing: border-box;
+}
+#reslut_search div a{
+	line-height: 2em;
+}
+#logout{
+	line-height: 2.5em;
+	margin-left: 1em;
+}
+/*Content.php*/
+.content{
+	padding: 1em 0;
+	top: 3.75em;
+	width: 100%;
+	height: auto;
+}
+.content-centered{
+	max-width: 54.375em;
+	margin: 0 auto 0;
+	min-height: 56.250em;
+	text-align: center;
+}
+.content-centered p{
+	margin: 2em auto 0;
+}
+.topic{
+	margin-bottom: 1em;
+	padding: 4em;
+}
+.topic img{
+	width: 100%;
+	max-width: 30em;
+}
+.comments-box{
+	width: 80%;
+	box-sizing: border-box;
+	text-align: center;
+	margin: 0 auto 1em;
+	padding-bottom: 2em;
+}
+.comments-box h2{
+	margin-bottom: 0.5em;
+}
+.comments-submit{
+	width: 100%;
+	margin: 0;
+	font-size: 1.5em;
+}
+.user-comments img{
+	width: 100%;
+	max-width: 4em;
+	min-width: 2em;
+}
+.comments-submit form{
+	margin-bottom: 2em;
+}
+.comments-submit textarea{
+	width: 100%;
+	max-width: 80%;
+	height: 10em;
+	max-height: 15em;
+	color: #FFF;
+}
+.comments-submit form input{
+	margin: 1em auto 2em;
+	color: #444;
+	border: 1px solid #444;
+	box-sizing: border-box;
+	line-height: 2em;
+}
+/*nav slide content.php*/
+.nav-slide{
+	width: 100%;
+	height: 50%;
+	top: 5em;
+}
+.prev, .next{
+	height: 50%;
+	width: 5em;
+}
+.prev{
+	right: 5%;
+}
+.next{
+	left: 5%;
+}
+.fa-chevron-right, .fa-chevron-left{
+	top: 50%;
+	color:#ccc;
+}
+.fa-chevron-right{
+	right: 0;
+}
+.prev:hover .fa-chevron-right, .next:hover .fa-chevron-left{
+	color: #05B1E6;
+}
+.fa-spinner{
+	color: #1DB6EA;
+}
+/*Pages.php*/
+.topics{
+	width: 80%;
+	max-width: 80em;
+	margin: auto;
+}
+.page-content-centered{
+	margin: 1em auto;
+}
+#topic-center{
+	width: 100%;
+	max-width: 80em;
+	min-width: 20.8em;
+	margin: 2em auto;
+	-moz-column-count: 1;
+	-moz-column-gap: 0.25em;
+	-webkit-column-count: 1;
+	-webkit-column-gap: 0.5em;
+	-webkit-colum-width: 19em;
+}
+.topics-box{
+	width: 100%;
+	height: 100%;
+	max-height: 22em;
+	max-width: 19.375em;
+	min-width: 14.375em;
+	overflow: hidden;
+	margin-bottom: 1em;
+	text-overflow: ellispsis;
+	-moz-text-overflow: ellispsis;
+	-moz-column-break-inside: avoid;
+	-webkit-text-overflow: ellipsis;
+	-webkit-column-break-inside: avoid;
+	box-sizing: border-box;
+	 box-shadow: 0.1em 0.1em 0.25em #ccc;
+}
+.topics-box .always-visible .topic-img{
+	margin: 0 10%;
+	width: 80%;
+}
+.topics-box .always-visible img,
+.topics-box .always-visible h2,
+.topics-box .always-visible h3,
+.topics-box .always-visible h4{
+	font-size: 1em;
+	margin: 0 0 0 10%;
+	padding: 2% 0;
+	background-color: #EEE;
+}
+.topics-box .always-visible h2,
+.topics-box .always-visible h3,
+.topics-box .always-visible h4{
+	width: 80%;
+	text-align: center;
+}
+.topics-box .always-visible h3 a{
+	line-height: 2em;
+}
+.topics-box .always-visible img{
+	padding: 0;
+}
+.topics-box .always-visible h3 img{
+	margin-left: 20%;
+}
+.topics-box .always-visible a, 
+.topics-box p{
+	color: #444;
+}
+.topics-box .always-visible{
+	/*border-bottom: 1px solid #ccc;*/
+}
+.topics-box p{
+	margin: 1em 0.5em;
+}
+#loadmore{
+	position: absolute;
+	width: 100%;
+	text-align: center;
+	top: 50%;
+	z-index: 100;
+}
+.holder{
+	width: 25%;
+	margin: auto;
+	text-align: center;
+}
+
+/*forget.php*/
+.forgetmdp{
+	min-height: 30.3em;
+	background-color: #FFF;
+}
+.forget{
+	width: 50%;
+	margin: 1em auto;
+	text-align: center;
+}
+
+/*Profil.php*/
+.users-panel{
+	width: 80%;
+	margin: 3em auto 0;
+	border: 1px solid #FFF;
+}
+.info-box{
+	margin-top: 1em;
+	width: 100%;
+	height: 8em;
+}
+.info-box img{
+	padding: 0.5em;
+	margin-left: 1em;
+}
+.info-box a, .info-box h4{
+	line-height: 4em;
+	margin-left: 2em; 
+}
+.info-box a{
+	line-height: 4.6em;
+	margin-left: 2em 
+}	
+.users-panel input{
+	height: 2em;
+	margin-right: 2em;
+	margin-top: 1.25em;
+}
+.users-panel input[type="password"]{
+	margin-top: 0.5em;
+}
+.users-panel #tof{
+	height: auto;
+}
+.dark, .meta{
+	border: none;
+	margin-top: 0;
+	padding: 0.5em 0;
+}
+.meta{
+	background-color: #888;
+}
+.meta-info{
+	margin: 0 2em 0 0;
+	float: right;
+}
+.meta-info li{
+	margin-top: 0.5em;
+}
+
+/*incscription.php & addcontent.php*/
+#inscription-form, #addcontent-form{
+	width: 100%;
+	box-sizing: border-box;
+	margin: 5em auto;
+}
+#inscription-aside, #add-aside{
+	text-align: center;
+	width: 100%;
+}
+#inscription-aside img, #add-aside img{
+	margin: 1em 0 2em 0;
+}
+#inscription-aside h1, #add-aside h1{
+	color: #FFF;
+	padding-bottom: 2em;
+	margin-bottom: 1em;
+}
+.inscription, .profil, #add-aside{
+	background-color: #525252;
+}
+#inscription-form input, #addcontent-form input, 
+#addcontent-form textarea{
+	display: block;
+	margin: 0 0 1em 0;
+}
+#addcontent-form textarea{
+	width: 80%;
+	max-width: 90%;
+	height: 30em;
+	max-height: 40em;
+	margin-left: 3.5em;
+}
+#inscription-form label, #addcontent label{
+	margin: 0 0 2em 0;
+}
+#inscription-form input, #addcontent-form input{
+	margin-left: 3em;
+}
+#inscription-form label, #addcontent-form label{
+	margin-left: 2.6em;
+}
+#inscription-form input[type="submit"], 
+#addcontent-form input[type="submit"], 
+.forget button[type="submit"]{
+	margin: 3em auto 2em;
+	color: #444;
+	border: 1px solid #444;
+	box-sizing: border-box;
+	line-height: 2em;
+}
+#inscription-form input[type="submit"]:hover, 
+#addcontent-form input[type="submit"]:hover{
+	color: #FFF;
+}
+#error-label{
+	position: absolute;
+	width: 50%;
+	min-width: 5em;
+	max-width: 30em;
+    top: 5em;
+    right: 5%;
+    padding: 1em 0;
+	text-align: center;
+	background-color: #fff;
+    border: 1px solid #292929;
+    z-index: 10;
+	line-height: 2em;
+}
+#error-label h6{
+	margin-top: 4em;
+}
+
+
+/*****
+Media Queries
+*****/
+
+
+/*Centering content between 480px & 639px*/
+@media (min-width: 480px) and (max-width: 639px){
+
+	#top-page{
+		width: 30em;
+	}
+	.wrap{
+		width: 30em;
+	}
+	.hidden-content p{
+		font-size: 1em; 
+	}
+	#error-label{
+	    right: 15%;
+	}
+}
+
+
+/*Two-Column*/
+@media (min-width: 640px){
+	#error-label{
+	    right: 1%;
+	}
+	#topic-center{
+		-moz-column-count: 2;
+		-moz-column-gap: 0.5em;
+		-moz-colum-width: 10em;
+		-webkit-column-count: 2;
+		-webkit-column-gap: 0.5em;
+		-webkit-colum-width: 10em;
+	}
+	#inscription-form, #addcontent-form{
+		width: 50%;
+		border: 1px solid #ccc;
+	}
+	 #addcontent-form{
+		box-shadow: 0.1em 0.1em 0.25em #ccc;	 	
+	 }
+	.comments-submit textarea{
+		max-width: 95%;
+	}
+	#search-field{
+		width: 100%;
+		max-width: 100%;
+		right: 0;
+	}
+	#top-page{
+		max-width: 100%;
+	}
+	.shoot{
+		display: inline-block;
+		text-transform: uppercase;
+		line-height: 2.125em;
+		position: relative;
+		top: 0.188em;
+	}
+	#main-part figure{
+		float: left;
+		width: 50%;
+	}
+	.centered p{
+		margin-bottom: 2em;
+	}
+	#main-part figcaption:hover .more-btn{
+		display: block;
+	}
+	.hidden-content{
+		margin-top: 0;
+		font-size: 0.875em;
+	}
+	.hidden-content p{
+		margin-bottom: 1em;
+	}
+	.more-btn{
+		padding: 0;
+		text-align: center;
+		line-height: 3em;
+		width: 8.125em;
+		height: 3.125em;
+	}
+	#second-part #contact-form input{
+		width: 45%;
+	}
+
+
+/*Content adjustment at 768px(min)*/
+@media (min-width: 768px){
+
+	#topic-center{
+		-moz-column-count: 3;
+		-moz-column-gap: 0.5em;
+		-moz-colum-width:19em;
+		-webkit-column-count: 3;
+		-webkit-column-gap: 0.5em;
+		-webkit-colum-width:19em;
+	}
+	#second-part article, #second-part #contact-form input{
+		float: left;
+	}
+	#article-second-part, .article-content{
+		margin: auto;
+	}
+	.connected{
+		display: block;
+	}
+	#logout{
+		line-height: 2.5em;
+	}
+	.info-box{
+		height: 6em;
+	}
+	.users-panel #tof{
+		float: right;
+	}
+	.users-panel input[type="password"]{
+		margin-top: 1.25em;
+	}
+	#search-field{
+		max-width: 50%;
+	}
+	.hidden-content{
+		font-size: 1em;
+	}
+	#second-part article{
+		width: 50%;
+	}
+	#article-second-part{
+		width: 75%;
+	}
+	#second-part article:last-child, #search-field{
+		width: 100%;
+	}
+	.article-content{
+		height: 22.125em;
+	}
+	#second-part p{
+		width: 80%;
+	}
+	#keep-in-touch{
+		z-index: 1;
+	}
+	form{
+		width: auto;
+	}
+	#second-part #contact-form{
+		margin-top: 0; 
+	}
+	#second-part #contact-form input{
+		width: 32%;
+		margin-right: 1%;
+		display: inline-block;
+	}
+	#second-part #contact-form #submit{
+		margin-right: 0;
+	}
+	#second-part #submit-btn i{
+		height: 2.65em;
+	}
+	#second-part textarea{
+		width: 98%;
+	}
+}
+
+
+/*Full width*/
+@media screen and (min-width: 1280px){
+
+	header{
+		height: 4.25em;
+	}
+	#top-nav a:hover, footer li a:hover{
+		border-bottom: 1px solid #ccc;
+	}
+	/*css commun*/
+	footer div, footer li, footer nav, #top-nav, #top-nav li, #top-nav li a,
+	#login, #logo{
+		display: inline-block;
+	}
+	#login input, #top-page #login a, #top-nav, #id-user-box, 
+	.user-comments img, .user-comments h2, .user-comments h4, #logo,
+	#copyright, footer li, 	#top-header h1, #main-part figure, #top-nav li{ 
+		float: left;
+	}
+	.info-box, #id-user-box{
+		height: 8em;
+	}
+	footer nav ul, .users-panel #tof{
+		float: right;
+	}
+	.page-content, .content, #main-part, #second-part, footer{
+		top: 4.25em;		
+	}
+	#top-header h1, #login{
+		position: inherit;
+	}
+	.left-menu, #search-field, #mini-login{
+		display: none;
+	}
+	#forget, #search-input{
+		display: block;
+	}
+	/*Ajout & changement projet en groupe*/
+	.hidden-content p{
+		font-size: 0.75em;
+	}
+	#logout{
+		margin-left: 2em;
+		vertical-align: middle;
+		line-height: 3.5em;
+	}
+	.connected{
+		margin-left: 40%;
+	}
+	#search{
+		width: 3%;
+		line-height: 2.8em;
+	}
+	#search-field{
+		max-width: 25%;
+		top:4.26em;
+		right: 0;
+	}
+	#reslut_search{
+		width: 100%;
+	}
+	#login{
+		background: inherit;
+		top: 0;
+		padding: 0;
+	}
+	#login input{
+		max-width: 8em;
+		margin-right: 0.1em;
+	}
+	#login input[type=submit]{
+		margin: 0.5em 0.3em 0 0;
+	}
+	#top-page #login a{
+		margin: 0;
+		font-size: 0.875em;
+		line-height: 1.5em;
+	}
+	#search-input{
+		background-color: #FAFAFA;
+		width: 100%;
+		height: 3em;
+		border: 1px solid #ccc;
+		border-top: none;
+	}
+	#topic-center{
+		-moz-column-count: 4;
+		-moz-column-gap: 0.5em;
+		-moz-colum-width:19em;
+		-webkit-column-count: 4;
+		-webkit-column-gap: 0.5em;
+		-webkit-colum-width:19em;
+	}
+
+	/*Page de contenu*/
+	.users-panel{
+		width: 50%;
+	}
+	#id-user-box{
+		width: 20%;
+	}
+	.user-comments p{
+		max-height: 5em;
+		width: 75%;
+		color: #444;
+		text-align: left;
+		margin-left: 4%; 
+	}
+	.content-centered figure{
+		margin: auto;
+	}
+	.user-comments{
+		margin: 2em auto;
+		width: 90%;
+	}	
+	.user-comments img, 
+	.user-comments h2,
+	.user-comments h4{
+		font-size: 1em;
+		color: #ccc;
+		margin: 0 0.25em 0 0;
+		line-height: 4em;
+	}
+	#id-user-box  h4{
+		font-size: 0.75em;
+	}
+
+	/*Page d'ajout de contenu & inscription*/
+	#inscription-form, #addcontent-form{
+		width: 30%;
+	}
+	#inscription-aside{
+		text-align: center;
+	}
+	#inscription-form label{	
+		margin: 0 37%;
+	}
+	#inscription-form input{
+		margin:0 auto 1em;
+	}
+	
+	/*Page recherche de topic*/
+
+	/*Page profil*/
+	.users-panel{
+		width: 60%;
+	}
+	.users-panel #tof{
+		margin-right: 1em;
+		height: auto;
+	}
+	/*fin ajout projet groupe*/
+	#top-header h1{
+		line-height: 2em;
+		width: 20%;
+		height: 3em;
+		left: 0;
+	}
+ 	#top-nav, #second-part article:last-child{
+		width: 50%;
+	}
+	#top-nav ul, #article-second-part, footer .container{
+		margin: auto;
+	}
+	footer nav ul{
+		height: 100%;
+	}
+	.shoot{
+		line-height: 2.5em;
+	}
+	#top-nav{
+		top: 0;
+		margin: 0.5em 0 0 23%;
+	}
+	#top-nav li a{
+		text-align: inherit;
+	}
+	#top-nav li{
+		border: none;
+		width: 14%;
+	}
+	 #right-menu{
+	 	width: 20%;
+	 }
+	#main-part figure{
+		width: 25%;
+	}
+	.hidden-content{
+		font-size: 1.25em;
+	}
+	.more-btn{
+		margin: 2em auto;
+	}
+	#article-second-part{
+		padding-top: 1em;
+	}
+	#second-part article{
+		width: 25%;
+	}
+	#article-second-part, footer .container{
+		width: 73em;
+	}
+	.contact-info img{
+		margin-right: 1em;
+	}
+	#copyright, footer nav{
+		height: 5em;
+	}
+	#copyright{
+		width: 30%;
+	}
+	#copyright p{
+		width: auto;
+		margin: 1.25em 0;
+	}
+	footer nav{
+		line-height: 6em;
+		width: 70%;
+	}
+	footer li a{
+		padding: 0 1em; 
+	}
+	#top-nav a:hover, footer li a:hover{
+		padding-bottom: 0.25em;
+	}
+}
